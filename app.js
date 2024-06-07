@@ -13,7 +13,8 @@ function printOdds(count){
     
 
     for (let i = 1; i <= count; i++){
-        if (i % 2 ! = 0){
+        if (i % 2 != 0)
+        {
             console.log(i);
         }
     }
@@ -53,7 +54,8 @@ checkAge("Supreme", 21);
 
 //Exercise 3
 
-function checkQuadrant(x,y){
+function checkQuadrant(x,y)
+{
     if (x > 0 && y > 0){
         return "Quadrant 1";
     } else if (x < 0 && y > 0){
@@ -78,14 +80,21 @@ checkQuadrant(1,-1);
 
 
 //Exercise 4
-function isValidTriangle(a, b, c){
-    let (isValid){
-        if (a == b && b == c){
+function isValidTriangle(a, b, c)
+{
+    let(isValid)
+    {
+        if (a == b && b == c)
+        {
             return 'Equilateral';
-        }else if (a == b || b == c || a == c){
+
+        } else if (a == b || b == c || a == c)
+        {
           return 'Isosceles';
         }
-    } else {
+    } else
+
+    {
         return 'Not a valid triangle';
     }
 }
@@ -97,7 +106,8 @@ checkTriangle(1, 1, 2);
 
 // Exercise 5
 
-function dataUsageFeedback(planLimit, day, usage){
+function dataUsageFeedback(planLimit, day, usage)
+{
     let periodLength = 30;
     let currentAvg = usage / day ;
     let projectedAvg = planLimit / periodLength;
@@ -109,17 +119,20 @@ function dataUsageFeedback(planLimit, day, usage){
     console.log('${day} day(s) used, ${remainingDays} day(s) remaining');
     console.log('Average projected use: ${projectedAvg} GB/day');
 
-    if(currentavg > projectedAvg){
+    if (currentavg > projectedAvg)
+    {
         statusMsg = "EXCEEDING"
-    } else if (currentAvg < projectedAvg){
+
+    } else if (currentAvg < projectedAvg)
+    {
         statusMsg = "UNDER";
-    } else{
+
+    } else
+    {
         statusMsg = "AT";
     }
 
-    console.log('You are ${statusMsg} your average daily use (${currentAvg} GB/day),continue this high usage, you will end using ${
-        planLimit - projectedUsage
-     } GB from your data limit.');
+    console.log('You are ${statusMsg} your average daily use (${currentAvg} GB/day),continue this high usage, you will end using ${planLimit - projectedUsage} GB from your data limit.');
 }
 
 dataUsageFeedback(50, 15, 25);
