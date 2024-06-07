@@ -116,8 +116,8 @@ function dataUsageFeedback(planLimit, day, usage)
     let projectedUsage = remainingDays * currentavg;
     let statusMsg;
 
-    console.log('${day} day(s) used, ${remainingDays} day(s) remaining');
-    console.log('Average projected use: ${projectedAvg} GB/day');
+    console.log(`${day} day(s) used, ${remainingDays} day(s) remaining`);
+    console.log(`Average projected use: ${projectedAvg} GB/day`);
 
     if (currentavg > projectedAvg)
     {
