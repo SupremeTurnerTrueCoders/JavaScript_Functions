@@ -49,7 +49,7 @@ function checklicense(name,age){
     }
 }
 
-checkAge("Supreme", 21);
+checklicense("Supreme", 21);
 
 
 //Exercise 3
@@ -82,26 +82,18 @@ checkQuadrant(1,-1);
 //Exercise 4
 function isValidTriangle(a, b, c)
 {
-    let(isValid)
-    {
-        if (a == b && b == c)
-        {
-            return 'Equilateral';
-
-        } else if (a == b || b == c || a == c)
-        {
-          return 'Isosceles';
-        }
-    } else
-
-    {
+    if (a == b && b == c) {
+        return 'Equilateral';
+    } else if (a == b || b == c || a == c) {
+        return 'Isosceles';
+    } else {
         return 'Not a valid triangle';
     }
 }
-checkTriangle(2, 3, 4);
-checkTriangle(2, 2, 2);
-checkTriangle(1, 2, 2);
-checkTriangle(1, 1, 2);
+isValidTriangle(2, 3, 4);
+isValidTriangle(2, 2, 2);
+isValidTriangle(1, 2, 2);
+isValidTriangle(1, 1, 2);
 
 
 // Exercise 5
@@ -113,13 +105,13 @@ function dataUsageFeedback(planLimit, day, usage)
     let projectedAvg = planLimit / periodLength;
     let remainingData = planLimit - usage;
     let remainingDays = periodLength - day;
-    let projectedUsage = remainingDays * currentavg;
+    let projectedUsage = remainingDays * currentAvg;
     let statusMsg;
 
     console.log(`${day} day(s) used, ${remainingDays} day(s) remaining`);
     console.log(`Average projected use: ${projectedAvg} GB/day`);
 
-    if (currentavg > projectedAvg)
+    if (currentAvg > projectedAvg)
     {
         statusMsg = "EXCEEDING"
 
@@ -132,10 +124,8 @@ function dataUsageFeedback(planLimit, day, usage)
         statusMsg = "AT";
     }
 
-    console.log('You are ${statusMsg} your average daily use (${currentAvg} GB/day),continue this high usage, you will end using ${planLimit - projectedUsage} GB from your data limit.');
+    console.log(`You are ${statusMsg} your average daily use (${currentAvg} GB/day),continue this high usage, you will end using ${planLimit - projectedUsage} GB from your data limit.`);
 }
 
+
 dataUsageFeedback(50, 15, 25);
-
-
-
