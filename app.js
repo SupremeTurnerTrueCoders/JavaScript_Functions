@@ -38,14 +38,14 @@ function checklicense(name,age){
 
     if (canDrink){
         console.log(
-            '${name} can drink. ${name} can also drive.NOT AT THE SAME TIME.'
+            `${name} can drink. ${name} can also drive.NOT AT THE SAME TIME.`
         );
     } else if (canDrive){
-        console.log('${name} can drive.');
+        console.log(`${name} can drive.`);
     } else if (canHavePermit){
-        console.log('${name} can drive with another person of age');
+        console.log(`${name} can drive with another person of age`);
     } else {
-        console.log('${name} too young. Wait some years');
+        console.log(`${name} too young. Wait some years`);
     }
 }
 
